@@ -3,6 +3,12 @@ const slides = slider.children;
 const [prevBtn, nextBtn, sliderCounter] = ['prevBtn', 'nextBtn', 'sliderCounter'].map(id => document.getElementById(id));
 let currentSlide = 0;
 
+
+document.getElementById('user-profile-icon').addEventListener('click', function() {
+    const userOptions = document.getElementById('user-options');
+    userOptions.classList.toggle('hidden'); // Toggle visibility - 1st click shows, 2nd click hides 
+});
+
 function updateSlider() {
     slider.style.transform = `translateX(-${currentSlide * 100}%)`;
     sliderCounter.textContent = `${currentSlide + 1} / ${slides.length}`;

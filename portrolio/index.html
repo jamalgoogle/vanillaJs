@@ -17,7 +17,7 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center justify-between">
-                    <div class="hidden md:block">
+                    <div class="hidden md:block">   
                         <div class="ml-10 flex f items-baseline space-x-4">
                             <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
                             <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About</a>
@@ -37,13 +37,19 @@
             </div>
         </div>
 
-        <div class="flex items-center">
+        <div class="flex items-center relative">
             <button class="flex items-center text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="user-profile-icon" aria-label="User profile">
                 <svg class="h-8 w-8 text-gray-300" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
                 </svg>
             </button>
+            <div id="user-options" class="absolute right-0 top-10 mt-2 w-48 bg-white rounded-md shadow-lg py-1 hidden">
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Profile</a>
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Settings</a>
+                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign out</a>
+            </div>
         </div>
+
         <!-- Mobile menu, show/hide based on menu state. -->
         <div id="mobile-menu" class="md:hidden hidden">
             <div class=" px-2 pt-2 pb-3 space-y-1 sm:px-3">
@@ -238,7 +244,6 @@
                 </div>
             </div>
         </div>
-        
     </footer>
 
     
