@@ -1,3 +1,4 @@
+// slider functionality
 const slider = document.querySelector('#slider > div');
 const slides = slider.children;
 const [prevBtn, nextBtn, sliderCounter] = ['prevBtn', 'nextBtn', 'sliderCounter'].map(id => document.getElementById(id));
@@ -17,6 +18,15 @@ function updateSlider() {
 
 updateSlider();
 
+
+// user options functionality
+document.getElementById('user-profile-icon').addEventListener('click', function() {
+    const userOptions = document.getElementById('user-options');
+    userOptions.classList.toggle('hidden'); // Toggle visibility - 1st click shows, 2nd click hides 
+});
+
+
+// Mobile menu toggle functionality
 
  document.getElementById('mobile-menu-button').addEventListener('click', function() {
      var menu = document.getElementById('mobile-menu');
