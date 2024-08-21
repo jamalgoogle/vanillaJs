@@ -1,28 +1,40 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en"  class="scroll-smooth">
 <head>
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- script file -->
    <script src="script.js" defer></script>
+   <!--tailwind style  -->
    <script src="https://cdn.tailwindcss.com"></script>
-   <title>Portfolio</title>
+   <title>Bassem Jamal</title>
 </head>
 <body>
     <!-- Tailwind CSS CDN -->
 
-    <nav class="bg-gray-800 flex items-center justify-between mx-auto px-4 sm:px-6 lg:px-8 ">
-       <div class="flex-shrink-0">
+
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" class="fixed z-10 bottom-4 right-4 bg-blue-500 text-white p-2 rounded-full shadow-lg opacity-0 transition-opacity duration-300 hover:bg-blue-600 focus:outline-none">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
+        </svg>
+    </button>
+
+    <!-- navbar section -->
+    <nav class="bg-gray-800 flex items-center justify-between mx-auto px-4 sm:px-6 lg:px-8 shadow-lg ">
+       <div class="cursor-pointer" href="index.html">
            <img class="h-8 w-8" src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg" alt="Logo">
        </div>
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center justify-between">
-                    <div class="hidden md:block">   
+                    <div class="hidden md:block"> 
                         <div class="ml-10 flex f items-baseline space-x-4">
-                            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
-                            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About</a>
-                            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Projects</a>
-                            <a href="#" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
+                            <a href="#home" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Home</a>
+                            <a href="#about" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">About</a>
+                            <a href="#projects" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Projects</a>
+                            <a href="#contact" class="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium">Contact</a>
                         </div>
                     </div>
                 </div>
@@ -32,22 +44,17 @@
                         <svg class="h-6 w-6 " xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
-                    </button>
+                    </button>                
                 </div>
             </div>
-        </div>
-
+        </div>  
+        <!-- user options -->
         <div class="flex items-center relative">
             <button class="flex items-center text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white" id="user-profile-icon" aria-label="User profile">
                 <svg class="h-8 w-8 text-gray-300" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M24 20.993V24H0v-2.996A14.977 14.977 0 0112.004 15c4.904 0 9.26 2.354 11.996 5.993zM16.002 8.999a4 4 0 11-8 0 4 4 0 018 0z" />
                 </svg>
             </button>
-            <div id="user-options" class="absolute right-0 top-10 mt-2 w-48 bg-white rounded-md shadow-lg py-1 hidden">
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Profile</a>
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Settings</a>
-                <a href="#" class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">Sign out</a>
-            </div>
         </div>
 
         <!-- Mobile menu, show/hide based on menu state. -->
@@ -60,8 +67,9 @@
             </div>
         </div>
     </nav>
+
     <!-- hero section -->
-    <section class="bg-gray-100 py-20">
+    <section id="home" class="bg-gray-100 py-20">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row items-center">
                 <!-- Left side: Image -->
@@ -73,15 +81,45 @@
                 <div class="flex-1 md:ml-12">
                     <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">Welcome to My Portfolio</h1>
                     <p class="text-xl text-gray-600 mb-8">I'm a passionate developer creating amazing web experiences. Explore my projects and let's build something great together!</p>
-                    <button class="bg-blue-600 text-white font-semibold py-3 px-8 rounded-lg hover:bg-blue-700 transition duration-300">
+                    <a href="#projects" class="bg-blue-600 text-white font-semibold py-4 px-8 rounded-lg hover:bg-blue-700 transition duration-300">
                         View Projects
-                    </button>
+                    </a>
                 </div>
             </div>
         </div>
     </section>
+    <hr>
+    
+    <!-- About Section -->
+    <section id="about" class="bg-gray-100 py-32">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">About Me</h2>
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 md:pl-12">
+                    <h3 class="text-2xl font-semibold text-gray-800 mb-4">Hello, I'm Bassem Jamal</h3>
+                    <p class="text-gray-600 mb-6">I'm a passionate web developer with 2 years of experience in creating responsive and user-friendly websites.<br> My expertise lies in front-end development, but I'm also proficient in back-end technologies.</p>
+                    <ul class="text-gray-600 mb-6">
+                        <li class="mb-2"><strong>Age:</strong> 28</li>
+                        <li class="mb-2"><strong>Location:</strong> New York, USA</li>
+                        <li class="mb-2"><strong>Email:</strong> john.doe@example.com</li>
+                        <li class="mb-2"><strong>Education:</strong> BSc in Computer Science</li>
+                    </ul>
+                    <div class="flex space-x-4">
+                        <a href="#" onclick="downloadCV(event)" class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700 transition duration-300">Download CV</a>
+                        <a href="#contact" class="bg-gray-300 text-gray-800 px-4 py-2 rounded-md hover:bg-gray-400 transition duration-300">Contact Me</a>
+                    </div>
+                </div>
+                <div class="md:w-1/2 mb-8 md:mb-0">
+                    <img src="https://via.placeholder.com/300x300" alt="Profile Picture" class="rounded-full w-72 h-72 mx-auto shadow-lg">
+                </div>
+            </div>
+        </div>
+    </section>
+    <hr>
+
+
     <!-- projects section -->
-    <section class="bg-white py-20">
+    <section id="projects" class="bg-gray-100 py-40">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center text-gray-800 mb-12">My Projects</h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -146,8 +184,9 @@
             </div>
         </div>
     </section>
+
     <!-- Image Slider Section -->
-    <section class="relative w-full overflow-hidden">
+    <section  class="relative py-16 w-full overflow-hidden">
         <div id="slider" class="relative">
             <!-- Slider images -->
             <div class="flex transition-transform duration-300 ease-in-out">
@@ -155,6 +194,7 @@
                 <img src="https://via.placeholder.com/1920x1080" alt="Slide 2" class="w-full h-auto">
                 <img src="https://via.placeholder.com/1920x1080" alt="Slide 3" class="w-full h-auto">
                 <img src="https://via.placeholder.com/1920x1080" alt="Slide 4" class="w-full h-auto">
+                <img src="https://via.placeholder.com/1920x1080" alt="Slide 5" class="w-full h-auto">
             </div>
 
             <!-- Slider arrows -->
@@ -171,12 +211,13 @@
 
             <!-- Slider counter -->
             <div id="sliderCounter" class="absolute bottom-4 right-4 bg-white bg-opacity-75 px-3 py-1 rounded-full text-sm font-semibold">
-                1 / 4
+                1 / 5
             </div>
         </div>
     </section>
+
     <!-- Contact Form Section -->
-    <section class="py-16 bg-gray-50">
+    <section id="contact" class="py-16 bg-gray-50">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-8">Contact Us</h2>
             <div class="flex justify-between items-center space-x-8">
@@ -217,10 +258,10 @@
     <footer class="bg-gray-800 text-white py-8">
         <div class="container mx-auto px-4">
             <div class="flex flex-col md:flex-row justify-between items-center">
-                <div class="mb-4 md:mb-0">
+                <div class="mb-4 md:mb-0  ml-10">
                     <p>&copy; 2023 Your Company Name. All rights reserved.</p>
                 </div>
-                <div class="flex space-x-4">
+                <div class="flex space-x-4 mr-10">
                     <a href="#" class="hover:text-blue-400 transition duration-300">
                         <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                             <path fill-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" clip-rule="evenodd" />
